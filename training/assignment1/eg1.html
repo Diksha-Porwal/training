@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>India
+</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="India">
+<meta name="author" content="DP">
+<meta charset="UTF-8">
+<style>
+div.titleBar
+{
+background-color: blue;
+color:white;
+text-align: center;
+margin: 0px;
+padding: 0px;
+}
+ul{
+
+  list-style-type: none;
+  background-color: white;
+  width: 100%;
+  padding: 0px;
+  margin: 0px;
+  display: inline-block;
+}
+ul li{
+display: inline-flex;
+  min-width:24%;
+
+}
+ul li a
+{
+
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.gridContainer
+{
+  display: grid;
+  grid-gap: 0px;
+  background-color: white;
+  min-height:500px;
+  min-width:100%;
+}
+.item1
+{
+  grid-column: 1 ;
+  grid-row: 1/ span 2;
+width:25px;
+  min-height:500px;
+}
+.item2
+{
+  grid-column: 2 ;
+  grid-row: 1/ span 2;
+  min-width:50%;
+
+  border:1px solid black;
+}
+.item3
+{
+  grid-column: 3;
+  grid-row: 1;
+  object-fit: cover;
+  min-width:30%;
+  min-height:250px;
+  border:1px solid black;
+}
+.item4
+{
+  grid-column: 3 ;
+  grid-row: 2;
+  min-width:30%;
+  min-height:250px;
+  border:1px solid black;
+}
+.footer{
+  background-color: white;
+  color:blue;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
+.navItems
+{
+  display:inline-block;
+  padding0px;
+  margin:0px;
+  text-align:center;
+  background-color: grey;
+  height:inherit;
+  vertical-align: middle;
+
+}
+
+</style>
+</head>
+<body>
+  <div name="titleBar" class="titleBar">
+  <h1>India</h1>
+  </div>
+<div name="navBarHeader" class="navBarHeader" style="border:1px solid black;">
+<ul class="navList">
+  <li style="background-color:blue"><a>History</a></li>
+  <li><a>Geography</a></li>
+  <li><a>Politics</a></li>
+  <li><a>Map</a></li>
+</ul>
+
+  </div>
+<!--
+<div style="width:100%;border:1px solid black;height:30px;margin:0px;">
+  <div class="navItems" style="width:25%;">History</div>
+  <div class="navItems" style="width:24%;">Geography</div>
+  <div class="navItems" style="width:24%;">Politics</div>
+  <div class="navItems" style="width:25%;">Map </div>
+</div>
+-->
+
+    <div class="gridContainer">
+      <div class="item1" >
+Cities:
+
+      </div>
+      <div class="item2">History</div>
+      <div class="item3">
+Map
+      </div>
+      <div class="item4">National items</div>
+    </div>
+<!--
+  <div style="width:300px;height:500px;border:1px solid black;display:inline">Cities</div>
+  <div style="width:500px;height:500px;border:1px solid black;display:inline"> History</div>
+
+  <div style="width:420px;height:500px;border:1px solid black;display:inline">
+    Map
+  </div>
+  -->
+
+<div name="footer" class="footer" style="border:1px solid black;"> &copy;&nbsp;newput 2007-2018
+</div>
+<div style="width:100px;height:100px"><img src="img_3_india.jpg" style="width:100%"></img></div>
+</body>
+
+</html>
