@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CALENDAR</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="CALENDAR">
+    <meta name="author" content="DP">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assignment4.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assignment4.js"></script>
+  </head>
+  <body>
+    <div class="outer-container">
+      <div class="inner-container-1">
+         <label class="month-year-label" id="year">2018</label>
+      </div>
+      <div class="inner-container-2">
+        <button class="button-left  glyphicon glyphicon-chevron-left" onclick="leftArrowClicked()"> </button>
+        <label class="month-year-label" id="month">February</label>
+        <button class="button-right glyphicon glyphicon-chevron-right" onclick="rightArrowClicked()"></button>
+      </div>
+      <div class="inner-container-3" id="inner-container-3">
+      </div>
+      <div class="inner-container-4">
+        <form onsubmit="return false" class="get-calendar-form">
+        <select id="input-month">
+          <option value="-1">Select month</option>
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3">April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
+        </select> &nbsp;
+        <input type="number" id="input-year" min="1" max="9999"> &nbsp;
+        <button onclick="getCalendar()"> Get Calendar
+        </button> &nbsp;
+        <span id="error-msg" class="error-msg"></span>
+      </form>
+      </div>
+    </div>
+  </body>
+  </html>
