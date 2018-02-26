@@ -13,14 +13,16 @@ var dayArray = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sat
 // and will match accordingly. will compare 2 date strings
 
 var employees = ["Shubham Katariya", "Shikha Shakarwar", "Vipin Joshi", "Gurpreet Chhabra", "Sonam Ravi Gupta", "Siyaram Patidar", "Shubham Choubey",
-"Mayur Vaidya", "Amit Nagar", "Deepak Patidar", "Diksha Porwal", "Rahul Kulmi", "Vishal Patidar", "Awanish Tiwari", "Nayanpriya Namdeo", "Surendra Patidar",
-"Anjana Singh", "Aaditya Paliwal", "Varsha Tyagi", "Rashmi Soni", "Priyanshi Asawara", "Shashank Saxena", "Nitesh Thakur",
-                "Satya Narayan Patidar"
+                "Mayur Vaidya", "Amit Nagar", "Deepak Patidar", "Diksha Porwal", "Rahul Kulmi", "Vishal Patidar", "Awanish Tiwari", "Nayanpriya Namdeo", "Surendra Patidar",
+                "Anjana Singh", "Aaditya Paliwal", "Varsha Tyagi", "Rashmi Soni", "Priyanshi Asawara", "Shashank Saxena", "Nitesh Thakur","Satya Narayan Patidar"
                 ];
 
 var birthdayDates = ["Jan 03 1995", "Jan 15 1994", "Jan 15 1946", "Apr 02 1995", "Apr 22 1987", "May 03 1985", "May 08 1993", "May 09 1995", "May 10 1986",
-"May 10 1990", "May 19 1995", "May 28 1988", "Jun 20 1994", "Jul 06 1974", "Jul 09 1992", "Jul 21 1988", "Jul 24 1992", "Aug 08 1994", "Oct 13 1992",
-"Oct 19 1993", "Nov 19 1993", "Dec 11 1990", "Dec 12 1990", "Dec 12 1983"]; //will make date objects from these date strings and then compare date and month
+                    "May 10 1990", "May 19 1995", "May 28 1988", "Jun 20 1994", "Jul 06 1974", "Jul 09 1992", "Jul 21 1988", "Jul 24 1992", "Aug 08 1994", "Oct 13 1992",
+                    "Oct 19 1993", "Nov 19 1993", "Dec 11 1990", "Dec 12 1990", "Dec 12 1983"
+                    ];
+
+ //will make date objects from these date strings and then compare date and month
 
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -35,6 +37,7 @@ function setCalendar()
   topRowDiv.className = "top-row-div";
   topRowDiv.setAttribute("id","top-row-div");
   document.getElementById("inner-container-3").appendChild(topRowDiv);
+
   for(var i = 0; i < 7; i++)
   {
     var topRowColDiv = document.createElement("div");
@@ -42,10 +45,12 @@ function setCalendar()
     topRowColDiv.innerHTML = (dayArray[i]).substr(0,3);
     document.getElementById("top-row-div").appendChild(topRowColDiv);
   } // setting of week day names ends here
+
   var bottomRowParentDiv = document.createElement("div");
   bottomRowParentDiv.className = "bottom-row-parent-div";
   bottomRowParentDiv.setAttribute("id","bottom-row-parent-div");
   document.getElementById("inner-container-3").appendChild(bottomRowParentDiv);
+
   var dateObject = new Date(currentYear , currentMonth , 1);
   var dayCode = dateObject.getDay(); // getting day for current months 1 date
   var x = new Date(currentYear, currentMonth+1 , 0);
@@ -85,11 +90,13 @@ function setCalendar()
         subDiv.innerHTML = currentDateNumber;
         var currentDateBirthdayPeople = [];
         var birthdayString = "";
+
         if(currentDateNumber == currentDateToHighlight && currentMonth == currentMonthToHighlight && currentYear == currentYearToHighlight)
         {
           subDiv.classList.add("highlight-current-date");
         }
-        for(var f = 0; f< birthdayDates.length ; f++) //logic for birtdates start
+
+        for(var f = 0; f < birthdayDates.length ; f++) //logic for birtdates start
         {
           var birthdate = new Date(birthdayDates[f]);
           if(birthdate.getDate() == currentDateNumber && birthdate.getMonth() == currentMonth)
@@ -97,10 +104,11 @@ function setCalendar()
             currentDateBirthdayPeople.push(employees[f]);
           }
         }
+
         if(currentDateBirthdayPeople.length > 0)
         {
           birthdayString = "Birthday of : ";
-          for(var f=0; f<currentDateBirthdayPeople.length; f++)
+          for(var f = 0; f < currentDateBirthdayPeople.length; f++)
           {
             birthdayString+= currentDateBirthdayPeople[f];
             if(f < currentDateBirthdayPeople.length-1)
@@ -110,6 +118,7 @@ function setCalendar()
           }
           subDiv.classList.add("birth-day");
         }
+
         subDiv.title = birthdayString;
         if(i == 0) // class applied first will be applicable so birthdate color will be on priority and its class added first
         {
@@ -121,6 +130,7 @@ function setCalendar()
         }
         bottomRowDiv.appendChild(subDiv);
         currentDateNumber++;
+
         if (currentDateNumber > lastDateOfMonth) // reached last date of the month
         {
           var x = new Date(currentYear, currentMonth, lastDateOfMonth);
@@ -129,6 +139,7 @@ function setCalendar()
           {
             var nextMonthDate = 1; // variable for printing dates of next month starting from 1
             var l = i; // variable tp print dates after the day of the last date of the current month
+
             while(l < 6)
             {
               var subDiv = document.createElement("div");
@@ -140,6 +151,7 @@ function setCalendar()
               l++;
             }
           }
+
           breakInfiniteLoop = true; // as reached last date of the current month , print remaining required dates of the next month and break from the loop
           document.getElementById("bottom-row-parent-div").appendChild(bottomRowDiv);
           break;
@@ -197,6 +209,7 @@ function getCalendar()
 {
   var month = document.getElementById("input-month").value;
   var year = document.getElementById("input-year").value;
+
   if(month == -1 || year == "")
   {
     document.getElementById("error-msg").innerHTML = "Select a month and year";
@@ -207,6 +220,7 @@ function getCalendar()
     document.getElementById("error-msg").innerHTML = "Enter a valid year";
     return;
   }
+  
   document.getElementById("error-msg").innerHTML = "";
   currentMonth = month;
   currentYear = year;

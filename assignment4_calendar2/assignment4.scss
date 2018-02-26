@@ -25,6 +25,7 @@ $blue-birthday-color: #71EAEC;
   font-size: 40px;
   font-weight: 400;
 }
+
 @mixin block-style($display, $font-size, $heigth, $padding-top, $text-align, $width) {
   display: $display;
   font-size: $font-size;
@@ -33,25 +34,32 @@ $blue-birthday-color: #71EAEC;
   text-align: $text-align;
   width: $width;
 }
-body {
+
+.body {
   background-image: url("images2.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
+
   .disabled-dates {
     background-color: $grey-disabled-dates-color;
   }
+
   .sunday-color {
     background-color: $green-sunday-color;
   }
+
   .saturday-color {
     background-color: $orange-saturday-color;
   }
+
   .birth-day {
     background-color: $blue-birthday-color;
   }
+
   .highlight-current-date {
     background-color: $orange-current-date-color;
   }
+
   .outer-container {
     margin: auto;
     margin-top: 40px;
@@ -61,6 +69,7 @@ body {
       .inner-container-1 {
         @include container-properties($green-bg-color, $yellow-bg-color, 80px, center);
         @include month-year-font;
+
         .month-year-label {
           margin-top: 10px;
           letter-spacing: 0.1em;
@@ -71,9 +80,11 @@ body {
         @include container-properties($yellow-bg-color, $green-bg-color, 80px, center);
         @include month-year-font;
         clear: both;
+
         .button-left {
           @include button(left);
         }
+
         .button-right {
           @include button(right);
         }
@@ -96,6 +107,7 @@ body {
 
           .bottom-row-div {
             height: 50px;
+
             .sub-div {
               @include block-style(inline-block, 20px, 100%, 10px, center, 85.71px);
             }
@@ -106,9 +118,11 @@ body {
       .inner-container-4 {
         min-height: 80px;
         background-color: $green-bg-color;
+
         .get-calendar-form {
           padding-top: 25px;
           padding-left: 110px;
+
           .error-msg {
             color: $yellow-bg-color;
             font-size: 16px;
