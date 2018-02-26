@@ -1,0 +1,190 @@
+$theme-color: #4c66a4;
+$button-darker-color: #334670;
+$white-color: #ffffff;
+$text-color-white: #ffffff;
+$nav-link-hover-color: #425990;
+@mixin jumbotron($background-color) {
+  text-align: center;
+  border-radius: 0px;
+  background-color: $background-color;
+  margin-bottom: 0px;
+}
+@mixin font($font-size: auto,$font-weight: auto) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+@mixin button {
+  padding: 15px 50px;
+  margin-top: 30px;
+  @include font($font-size: 20px);
+  background-color: $button-darker-color;
+  color: #ffffff;
+  &:hover {
+    background-color: #1f2a44;
+  }
+}
+@mixin background-color($background-color) {
+  background-color: $background-color;
+}
+.heading {
+  @include font($font-size: 35px,$font-weight: 400);
+}
+
+.heading-bold {
+  @include font($font-size: 35px,$font-weight: 900);
+}
+
+.heading-description {
+  @include font($font-size: 23px,$font-weight: 200);
+}
+
+.heading-bold-description {
+  @include font($font-weight: 900);
+}
+
+.footer-text {
+  @include font($font-size: 12px , $font-weight: 200);
+}
+body {
+  #header {
+    .navbar {
+      margin-bottom: 0px;
+      border-radius: 0px;
+      .navbar-nav {
+        list-style-type: none;
+      }
+      .nav-list-margin {
+        margin-right: 45px;
+      }
+      .navbar-header {
+        .brand-name {
+          color: $white-color;
+          @include font($font-size: 30px);
+          img {
+            height :30px;
+            width :30px;
+          }
+        }
+        .brand-name-padding {
+          padding-left: 50px;
+        }
+        .navbar-toggle {
+          border: 1px solid $button-darker-color;
+          @include background-color($button-darker-color);
+          .icon-bar {
+            @include background-color($white-color);
+          }
+        }
+      }
+      .navbar-collapse {
+        border-color: $button-darker-color;
+      }
+
+      ul {
+        li {
+          a {
+            color: $white-color;
+            &:hover {
+              @include background-color($nav-link-hover-color);
+            }
+          }
+        }
+        .active-link {
+          @include background-color($button-darker-color);
+        }
+      }
+    }
+
+    .navbar-default {
+      @include background-color($theme-color);
+      border: none;
+    }
+    .jumbotron {
+      color: $text-color-white;
+      text-shadow: 3px 3px #334670;
+      @include jumbotron($theme-color);
+      h1 {
+        @include font($font-weight: 350);
+        letter-spacing: 1.5px;
+      }
+      .btn-lg {
+        @include button;
+      }
+    }
+  }
+
+  #introduction {
+    .jumbotron {
+      @include jumbotron($white-color);
+      .intro-panels {
+        margin-top: 30px;
+        text-align: center;
+        p{
+          @include font($font-size: 15px);
+        }
+        .glyphicon {
+          color: $theme-color;
+          @include font($font-size: 90px);
+        }
+        .intro-panel-label {
+          margin-top: 20px;
+          @include font($font-size: 25px,$font-weight: 200);
+        }
+      }
+    }
+  }
+
+  #lets-get-started {
+    .jumbotron {
+      @include jumbotron(#e6e4e4);
+      .img-thumbnail {
+          @include background-color(#e6e4e4);
+        border: none;
+      }
+      .btn-lg {
+        @include button;
+      }
+    }
+  }
+
+  #testimonials {
+    .jumbotron {
+      @include jumbotron(#f7f7f7);
+      .testimonials-comments {
+        @include font($font-size: 19px);
+        padding: 20px;
+        text-align: left;
+      }
+      .testimonials-comments-author-name {
+        color: #0645AD;
+        text-align: left;
+        display: inline-block;
+        padding-top: 5px;
+      }
+    }
+  }
+
+  #footer {
+    .jumbotron {
+      color: #8A9CC8;
+      padding-left: 0px;
+      padding-right: 0px;
+      @include jumbotron($theme-color);
+      ul{
+        list-style-type: none;
+        text-align: left;
+        margin-left: 0;
+        .list-title{
+          @include font($font-weight: bolder);
+        }
+        li {
+          a {
+            text-decoration: none;
+            color: #8A9CC8;
+            @extend .footer-text;
+          }
+        }
+      }
+    }
+  }
+}
