@@ -1,0 +1,136 @@
+#body {
+  overflow-x: hidden; }
+  #body .header {
+    font-size: 60px;
+    font-weight: 600;
+    font-family: Georgia;
+    letter-spacing: 0.1em;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9; }
+    #body .header .form {
+      margin-top: 25px; }
+  #body .subject-column {
+    padding: 0px;
+    position: fixed;
+    top: 87px; }
+    #body .subject-column #subject-list {
+      padding: 0px; }
+      #body .subject-column #subject-list li {
+        font-size: 20px;
+        font-weight: 600;
+        background: url("image1.png") no-repeat;
+        background-position: 15px;
+        background-size: 20px 20px;
+        height: 59px;
+        list-style-type: none;
+        padding-left: 44px;
+        padding-top: 15px; }
+        #body .subject-column #subject-list li a {
+          color: #000000;
+          cursor: pointer;
+          text-decoration: none; }
+        #body .subject-column #subject-list li:nth-child(odd) {
+          border-left: 8px solid transparent; }
+        #body .subject-column #subject-list li:nth-child(even) {
+          background-color: rgba(191, 191, 191, 0.1);
+          border-left: 8px solid rgba(191, 191, 191, 0.8); }
+        #body .subject-column #subject-list li:nth-child(odd):hover, #body .subject-column #subject-list li:nth-child(even):hover {
+          background-color: #F8EAC7;
+          border-left: 8px solid #F3DDA4; }
+  #body .books-list-div {
+    background-image: url("image2.jpg");
+    left: 213px;
+    top: 87px; }
+    #body .books-list-div .error-msg-div {
+      font-size: 40px;
+      font-weight: 900;
+      color: #ffffff;
+      height: 590px;
+      text-align: center; }
+    #body .books-list-div .books-list-inner-div {
+      column-count: 3;
+      column-gap: 10px;
+      max-height: 100%; }
+      #body .books-list-div .books-list-inner-div .book-outer-div {
+        background-color: #ffffff;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        margin: 5px;
+        padding: 5px;
+        width: 100%; }
+        #body .books-list-div .books-list-inner-div .book-outer-div .img-div {
+          min-height: 50px; }
+          #body .books-list-div .books-list-inner-div .book-outer-div .img-div .img {
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 15px; }
+  #body .book-item-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+    color: #ffffff;
+    display: none;
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99; }
+    #body .book-item-overlay .cross-btn {
+      font-size: 20px;
+      font-weight: 400;
+      margin-top: 50px;
+      text-align: auto;
+      margin-left: 1200px; }
+    #body .book-item-overlay .book-item-overlay-title {
+      font-size: 50px;
+      font-weight: 700;
+      margin-top: 100px;
+      text-align: center; }
+    #body .book-item-overlay .separator {
+      font-size: 25px;
+      font-weight: 200;
+      margin-top: 20px;
+      text-align: center;
+      border: 3px solid #ffffff;
+      width: 700px;
+      margin-left: auto;
+      margin-right: auto; }
+    #body .book-item-overlay .book-item-overlay-subTitle {
+      font-size: 25px;
+      font-weight: 200;
+      margin-top: 10px;
+      text-align: center; }
+    #body .book-item-overlay .book-item-overlay-description {
+      font-size: 18px;
+      font-weight: 200;
+      margin-top: 40px;
+      text-align: center;
+      padding: 0 100px; }
+  #body .overlay-div {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    font-weight: 900;
+    background-color: rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    color: #ffffff;
+    text-align: center; }
+    #body .overlay-div .overlay-title-div {
+      margin-top: 150px;
+      font-size: 15px; }
+    #body .overlay-div .overlay-isbn-div {
+      margin-top: 10px; }
+    #body .overlay-div .overlay-detail-btn-div {
+      margin-top: 10px; }
+      #body .overlay-div .overlay-detail-btn-div .overlay-detail-btn {
+        color: #000000; }
+
+/*# sourceMappingURL=assignment6.css.map */

@@ -1,0 +1,175 @@
+$white-color : #ffffff;
+$black-color: #000000;
+$li-hover-bg-color: #F8EAC7;
+$li-hover-border-color: #F3DDA4;
+$book-item-overlay-color: hsla(0,0,0,0.1);
+@mixin overlay($font-size, $font-weight, $margin-top, $text-align) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin-top: $margin-top;
+  text-align: $text-align;
+}
+@mixin font($font-size, $font-weight) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+}
+
+#body {
+  overflow-x: hidden;
+
+  .header {
+    @include font(60px , 600);
+    font-family: Georgia;
+    letter-spacing: 0.1em;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 9;
+    .form {
+      margin-top: 25px;
+    }
+  }
+
+  .subject-column {
+    padding: 0px;
+    position: fixed;
+    top: 87px;
+    #subject-list {
+      padding: 0px;
+       li{
+        @include font(20px , 600);
+        background: url('image1.png') no-repeat;
+        background-position: 15px;
+        background-size: 20px 20px;
+        height: 59px;
+        list-style-type: none;
+        padding-left: 44px;
+        padding-top: 15px;
+        a {
+          color: $black-color;
+          cursor: pointer;
+          text-decoration: none;
+        }
+        &:nth-child(odd) {
+          border-left: 8px solid transparent;
+        }
+        &:nth-child(even) {
+            background-color: hsla(0,0,75%,0.1);
+            border-left: 8px solid hsla(0,0,75%,0.8);
+        }
+        &:nth-child(odd):hover ,&:nth-child(even):hover {
+            background-color: $li-hover-bg-color;
+            border-left: 8px solid $li-hover-border-color;
+        }
+      }
+    }
+  }
+
+  .books-list-div {
+      background-image: url('image2.jpg');
+      left: 213px;
+      top: 87px;
+
+      .error-msg-div {
+        @include font(40px , 900);
+        color: $white-color;
+        height: 590px;
+        text-align: center;
+      }
+
+      .books-list-inner-div {
+        column-count: 3;
+        column-gap: 10px;
+        max-height: 100%;
+
+        .book-outer-div {
+          background-color: $white-color;
+          border: 1px solid $book-item-overlay-color;
+          border-radius: 15px;
+          margin: 5px;
+          padding: 5px;
+          width: 100%;
+
+          .img-div {
+            min-height: 50px;
+
+            .img {
+              width: 100%;
+              border: 1px solid $book-item-overlay-color;
+              border-radius: 15px;
+            }
+          }
+      }
+    }
+  }
+
+  .book-item-overlay {
+      background-color: hsla(0,0,0,0.7);
+      cursor: pointer;
+      color: $white-color;
+      display: none;
+      height: 100%;
+      left: 0;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 99;
+
+      .cross-btn {
+        @include overlay(20px, 400, 50px, auto);
+        margin-left: 1200px;
+      }
+
+      .book-item-overlay-title {
+        @include overlay(50px, 700, 100px, center);
+      }
+
+      .separator {
+        @include overlay(25px, 200, 20px, center);
+        border: 3px solid $white-color;
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .book-item-overlay-subTitle {
+        @include overlay(25px, 200, 10px, center);
+      }
+
+      .book-item-overlay-description {
+        @include overlay(18px, 200, 40px, center);
+        padding: 0 100px;
+      }
+  }
+
+  .overlay-div {
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    font-weight: 900;
+    background-color: $book-item-overlay-color;
+    border: 1px solid $book-item-overlay-color;
+    border-radius: 15px;
+    color: $white-color;
+    text-align: center;
+
+    .overlay-title-div {
+      margin-top: 150px;
+      font-size: 15px;
+    }
+    .overlay-isbn-div {
+      margin-top: 10px;
+    }
+    .overlay-detail-btn-div{
+      margin-top: 10px;
+      .overlay-detail-btn {
+        color: $black-color;
+      }
+    }
+  }
+}
