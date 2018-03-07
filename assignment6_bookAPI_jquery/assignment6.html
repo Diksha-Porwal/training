@@ -15,7 +15,7 @@
   <body id="body">
     <div class="row well header">
       <div class="col-md-6"> Books &nbsp; Library </div>
-      <form class="col-md-6 form">
+      <form class="col-md-6 form" onsubmit="return false">
           <div class="input-group">
             <input id="search" type="text" class="form-control" placeholder="Search">
             <div class="input-group-btn">
@@ -28,16 +28,16 @@
     </div>
     <div class="col-md-2 subject-column">
       <ul id="subject-list">
-        <li><a href="#">AngularJS </a></li>
-        <li><a href="#">Bootstrap </a></li>
-        <li><a href="#">CSS </a></li>
-        <li><a href="#">Data Structures </a></li>
-        <li><a href="#">HTML5 </a></li>
-        <li><a href="#">Java </a></li>
-        <li><a href="#">Javascript </a></li>
-        <li><a href="#">PHP </a></li>
-        <li><a href="#">Python </a></li>
-        <li><a href="#">Ruby on Rails </a></li>
+        <li><a>AngularJS </a></li>
+        <li><a>Bootstrap </a></li>
+        <li><a>CSS </a></li>
+        <li><a>Data Structures </a></li>
+        <li><a>HTML5 </a></li>
+        <li><a>Java </a></li>
+        <li><a>Javascript </a></li>
+        <li><a>PHP </a></li>
+        <li><a>Python </a></li>
+        <li><a>Ruby on Rails </a></li>
       </ul>
     </div>
     <div class="col-xs-12 col-md-10 books-list-div" id="books-list-div">
@@ -46,14 +46,11 @@
       <div id="error-msg-div" class="error-msg-div"> No items exists ...
       </div>
     </div>
-
-
     <div class="book-item-overlay">
       <div class="cross-btn"><span onclick="crossBtnClicked()">X</span>
       </div>
       <div class="book-item-overlay-title">
       </div>
-
       <div class="book-item-overlay-subTitle">
       </div>
       <div class="separator">

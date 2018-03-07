@@ -1,31 +1,28 @@
 var pageNumber = 1;
 var subject = "Java";
 var baseUrl = "http://it-ebooks-api.info/v1/search/";
-var url = baseUrl+subject+"/page/"+pageNumber;
 
 $(document).ready(function() {
   $(window).on("scroll" , function(event) {
     if(($(window).scrollTop() + $(window).height()) > $(document).height()-100 ) {
     pageNumber++;
-    url = baseUrl+subject+"/page/"+pageNumber;
-    loadBooks();
+    loadBooks(subject , pageNumber);
     }
   });
-
-  loadBooks();
+  loadBooks(subject , pageNumber);
 
   $("#subject-list li").on("click", function(event){
     pageNumber = 1;
     $("#search").val(" ");
     subject = $(this).text();
     $(window).scrollTop(0);
-    url = baseUrl+subject+"/page/"+pageNumber;
     $("#books-list-inner-div").empty();
-    loadBooks();
+    loadBooks(subject , pageNumber);
   });
 });
 
-function loadBooks() {
+function loadBooks(selectedSubject , pageNumber) {
+  var url = baseUrl+selectedSubject+"/page/"+pageNumber;
   $.get(url , function(data, status){
     if(data.hasOwnProperty("Books") == true){
       $("#error-msg-div").hide();
@@ -35,7 +32,6 @@ function loadBooks() {
     }
   });
 }
-
 
 function setBooks(data) {
   var i = 0;
@@ -85,11 +81,8 @@ function crossBtnClicked() {
 function searchBtnClicked() {
   var searchText = $("#search").val();
   pageNumber = 1;
-  k = 1;
   subject = searchText;
-  var scroll = function(){ $(window).scrollTop(0)};
-  scroll();
-  url = baseUrl+subject+"/page/"+pageNumber;
+  $(window).scrollTop(0);
   $("#books-list-inner-div").empty();
-  loadBooks();
+  loadBooks(subject , pageNumber);
 }
