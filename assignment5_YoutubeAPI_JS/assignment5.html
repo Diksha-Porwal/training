@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Youtube">
+    <meta name="author" content="DP">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assignment5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assignment5.js"></script>
+  </head>
+  <body class="body">
+    <div class="header jumbotron">
+        YOUTUBE
+    </div>
+    <div class="container-fluid" >
+      <div class="col-xs-offset-1 col-xs-10">
+        <form id="search-form" onkeydown="enterPressed()" onsubmit="return false">
+          <div class="input-group">
+            <input type="text" id="search-box" class="form-control" placeholder="Search" aria-describedby="search-icon">
+            <span class="input-group-addon" id="search-icon" onclick="searchButtonClicked()"><span class="glyphicon glyphicon-search"></span></span>
+          </div>
+        </form>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
+
+      <div class="col-xs-12 result" id="result">
+        <div id="result-outer-child-div">
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header" id="modal-header">
+          <label id="modal-title"></label>
+          <span class="close" id="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <iframe id="iframe" class="iframe">
+          </iframe>
+        </div>
+        <div class="modal-footer" id="modal-footer">
+        </div>
+      </div>
+    </div>
+      <div class="loader" id="loader"></div>
+      <div id="no-items" class="no-items">No search results !!!</div>
+  </body>
+</html>
