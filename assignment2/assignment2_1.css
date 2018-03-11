@@ -1,0 +1,182 @@
+  .logo-header label{
+    font-family: ballparkFont;
+    font-size: 40px;
+    font-weight: normal;
+  }
+  @font-face {
+    font-family: ballparkFont;
+    src:url('fonts/ballpark.woff');
+  }
+  @font-face {
+    font-family: dayromFont;
+    src:url('fonts/dayrom.woff');
+  }
+  .separator-image {
+    background-image: url('images/line.png');
+    height: 4px;
+  }
+  body {
+    background-image: url('images/yellow_background.png');
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  nav {
+    margin-bottom: 20px;
+  }
+  nav label {
+    font-family: dayromFont;
+    font-size: 13px;
+    font-weight: 30px;
+  }
+  nav ul {
+    float: right;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 14px;
+  }
+  nav ul li a {
+    color: black;
+    font-family: dayromFont;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .hero-image {
+    height: 300px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+  }
+  .hero-image img {
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    height: 100%;
+    width: 100%;
+  }
+  .hero-image div {
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 2px;
+    height: 15%;
+    opacity: 0.8;
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+  }
+  .hero-image div label {
+    color: white;
+  }
+  .hero-image button {
+    background-color: FireBrick;
+    background-image: url('images/small_arrow.png');
+    background-repeat:no-repeat;
+    background-position: right 10px;
+    border-color: FireBrick;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    height:80%;
+    margin-right: 10px;
+    padding-top: 0;
+  }
+  .border-black {
+    border:1px solid black;
+  }
+  .headings {
+    font-family: dayromFont;
+    font-size: 20px;
+    font-weight: 10px;
+    letter-spacing: 1px;
+  }
+  section {
+    display: inline-block;
+    height:400px;
+    padding-right: 7px;
+    width: 75%;
+  }
+  .section-headbar {
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+  section label {
+    display: inline-block;
+    margin-top: 12px;
+    vertical-align: top;
+  }
+  section img {
+    height: 100%;
+  }
+  .description {
+    font-family: Arial;
+    font-size: small;
+    font-weight: 2;
+  }
+  aside {
+    background-color: Gray;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    height: 400px;
+    position: relative;
+    vertical-align: top;
+    width: 24%;
+  }
+  aside p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .aside-section-arrow {
+    left: 10%;
+    margin-left: -14%;
+    margin-top: 15%;
+    position: relative;
+    vertical-align: top;
+  }
+  .aside-description {
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .zozor-img {
+    border: 1px solid black;
+    margin-left: 30%;
+  }
+  .social-links-bar {
+    height: 20px;
+    padding-left: 15px;
+  }
+  .bottom-panel {
+    height: 150px;
+    margin-top: 10px;
+  }
+  .bottom-panels {
+    float: left;
+    height: 100%;
+    width:33%;
+  }
+  .bottom-panel-3 ul {
+    color: FireBrick;
+    float: left;
+    list-style-image: url("images/external_link.png");
+    margin: 0px;
+    width:40%;
+  }
+  .bottom-panel-3-heading {
+    padding-left: 40px;
+  }
+  .bottom-panel-pictures {
+    width:20%;
+  }
+  footer {
+    margin-top: 20px;
+  }
+  .bottom-panel-arrow {
+    margin-left:48%;
+  }
