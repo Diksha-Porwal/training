@@ -1,0 +1,84 @@
+.body {
+  background-image: url("images2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .body .disabled-dates {
+    background-color: #E0E3E5; }
+  .body .sunday-color {
+    background-color: #B6C90D; }
+  .body .saturday-color {
+    background-color: #E2C10D; }
+  .body .birth-day {
+    background-color: #71EAEC; }
+  .body .highlight-current-date {
+    background-color: #E2780D; }
+  .body .outer-container {
+    margin: auto;
+    margin-top: 40px;
+    min-height: 590px;
+    width: 600px; }
+    .body .outer-container .inner-container-1 {
+      background-color: #056576;
+      color: #F5F987;
+      min-height: 80px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400; }
+      .body .outer-container .inner-container-1 .month-year-label {
+        margin-top: 10px;
+        letter-spacing: 0.1em; }
+    .body .outer-container .inner-container-2 {
+      background-color: #F5F987;
+      color: #056576;
+      min-height: 80px;
+      text-align: center;
+      font-size: 40px;
+      font-weight: 400;
+      clear: both; }
+      .body .outer-container .inner-container-2 .button-left {
+        background-color: #F5F987;
+        border: none;
+        float: left;
+        margin-top: 17px;
+        outline: none; }
+      .body .outer-container .inner-container-2 .button-right {
+        background-color: #F5F987;
+        border: none;
+        float: right;
+        margin-top: 17px;
+        outline: none; }
+    .body .outer-container .inner-container-3 {
+      min-height: 350px; }
+      .body .outer-container .inner-container-3 .top-row-div {
+        height: 50px;
+        background-color: #F5F987;
+        color: #056576; }
+        .body .outer-container .inner-container-3 .top-row-div .top-row-col-div {
+          display: inline-block;
+          font-size: 24px;
+          height: 100%;
+          padding-top: 8px;
+          text-align: center;
+          width: 85.71px; }
+      .body .outer-container .inner-container-3 .bottom-row-parent-div {
+        min-height: 300px; }
+        .body .outer-container .inner-container-3 .bottom-row-parent-div .bottom-row-div {
+          height: 50px; }
+          .body .outer-container .inner-container-3 .bottom-row-parent-div .bottom-row-div .sub-div {
+            display: inline-block;
+            font-size: 20px;
+            height: 100%;
+            padding-top: 10px;
+            text-align: center;
+            width: 85.71px; }
+    .body .outer-container .inner-container-4 {
+      min-height: 80px;
+      background-color: #056576; }
+      .body .outer-container .inner-container-4 .get-calendar-form {
+        padding-top: 25px;
+        padding-left: 110px; }
+        .body .outer-container .inner-container-4 .get-calendar-form .error-msg {
+          color: #F5F987;
+          font-size: 16px; }
+
+/*# sourceMappingURL=assignment4.css.map */

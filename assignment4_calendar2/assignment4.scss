@@ -1,0 +1,133 @@
+$green-bg-color: #056576;
+$yellow-bg-color: #F5F987;
+$green-sunday-color: #B6C90D;
+$orange-saturday-color: #E2C10D;
+$grey-disabled-dates-color: #E0E3E5;
+$orange-current-date-color: #E2780D;
+$blue-birthday-color: #71EAEC;
+
+@mixin button ($float) {
+  background-color: $yellow-bg-color;
+  border: none;
+  float: $float;
+  margin-top: 17px;
+  outline: none;
+}
+
+@mixin container-properties($background-color, $color, $min-height, $text-align) {
+  background-color: $background-color;
+  color: $color;
+  min-height: $min-height;
+  text-align: $text-align;
+}
+
+@mixin month-year-font {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+@mixin block-style($display, $font-size, $heigth, $padding-top, $text-align, $width) {
+  display: $display;
+  font-size: $font-size;
+  height: $heigth;
+  padding-top: $padding-top;
+  text-align: $text-align;
+  width: $width;
+}
+
+.body {
+  background-image: url("images2.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .disabled-dates {
+    background-color: $grey-disabled-dates-color;
+  }
+
+  .sunday-color {
+    background-color: $green-sunday-color;
+  }
+
+  .saturday-color {
+    background-color: $orange-saturday-color;
+  }
+
+  .birth-day {
+    background-color: $blue-birthday-color;
+  }
+
+  .highlight-current-date {
+    background-color: $orange-current-date-color;
+  }
+
+  .outer-container {
+    margin: auto;
+    margin-top: 40px;
+    min-height: 590px;
+    width: 600px;
+
+      .inner-container-1 {
+        @include container-properties($green-bg-color, $yellow-bg-color, 80px, center);
+        @include month-year-font;
+
+        .month-year-label {
+          margin-top: 10px;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      .inner-container-2 {
+        @include container-properties($yellow-bg-color, $green-bg-color, 80px, center);
+        @include month-year-font;
+        clear: both;
+
+        .button-left {
+          @include button(left);
+        }
+
+        .button-right {
+          @include button(right);
+        }
+      }
+
+      .inner-container-3 {
+        min-height: 350px;
+
+        .top-row-div {
+          height: 50px;
+          background-color: $yellow-bg-color;
+          color: $green-bg-color;
+
+          .top-row-col-div {
+            @include block-style(inline-block, 24px, 100%, 8px, center, 85.71px);
+          }
+        }
+        .bottom-row-parent-div {
+          min-height: 300px;
+
+          .bottom-row-div {
+            height: 50px;
+
+            .sub-div {
+              @include block-style(inline-block, 20px, 100%, 10px, center, 85.71px);
+            }
+          }
+        }
+      }
+
+      .inner-container-4 {
+        min-height: 80px;
+        background-color: $green-bg-color;
+
+        .get-calendar-form {
+          padding-top: 25px;
+          padding-left: 110px;
+
+          .error-msg {
+            color: $yellow-bg-color;
+            font-size: 16px;
+          }
+        }
+      }
+  }
+}
