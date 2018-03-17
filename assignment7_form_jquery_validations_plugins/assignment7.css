@@ -1,0 +1,102 @@
+@media screen and (max-width: 767px){
+  .left-side-element{
+    float: left;
+    width:100%;
+  }
+  .right-side-element{
+    float: left;
+    width:100%;
+  }
+  .headings{
+    color: Navy;
+    font-size: large;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .left-side-element{
+    float: left;
+    padding-right: 8px;
+    width:50%;
+  }
+  .right-side-element{
+    float: left;
+    padding-left: 8px;
+    width:50%;
+  }
+  .headings{
+    color: Navy;
+    font-size: x-large;
+  }
+}
+
+.asterisk-style{
+  color: red;
+}
+.badge{
+  background-color: #44d43b;
+  border-radius: 15px;
+  font-size: large;
+  vertical-align: inherit;
+}
+
+body{
+  padding: 30px;
+}
+.create-button{
+  background-color: LightSkyBlue;
+  border:1px solid  LightSkyBlue;
+  float: right;
+  font-weight: bold;
+  height:35px;
+  width:200px;
+}
+.form-container{
+  background-color: LightSkyBlue;
+  padding: 15px;
+}
+.form-content{
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 15px;
+}
+footer{
+  color: grey;
+  font-size: small;
+  font-weight: lighter;
+  margin-right: 10px;
+  margin-top: 5px;
+  text-align:right;
+}
+label{
+  font-weight: normal;
+  text-align: left;
+}
+.replicated-form-control{
+  display: block;
+  font-size: 14px;
+  height: 34px;
+  line-height: 1.42857143;
+  width: 100%;
+}
+/* .sub-labels{
+  color: grey;
+  font-size: 9px;
+} */
+.title{
+  font-size: 30px;
+  font-weight: 800;
+}
+.title-description{
+  color: grey;
+}
+.map {
+  height: 210px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px 3px #ccc;
+}
+.error {
+  color: red;
+}

@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Form</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Form">
+    <meta name="author" content="DP">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="assignment7.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places"></script>
+    <script src="jquery.geocomplete.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="assignment7.js"> </script>
+    </head>
+    <body>
+      <div class="form-container">
+        <div class="form-content">
+           <p class="title">Create a free account</p>
+           <p class="title-description">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever </p>
+           <form action="#" id="form">
+             <div><span class="badge">1</span><label class="headings">&nbsp;Personal information:</label></div>
+             <div>
+               <div class="form-group">
+                 <label>Select a gender:&nbsp;</label>
+                 <input type="radio" name="gender">&nbsp;Yes&nbsp;
+                 <input type="radio" name="gender">&nbsp;No
+               </div>
+             </div>
+             <div class="clearfix">
+               <div class="form-group left-side-element">
+                 <label for="firstname">First name:<span class="asterisk-style">*</span></label>
+                 <input id="firstname" name="firstname" type="text" class="form-control" >
+               </div>
+               <div class="form-group right-side-element">
+                <label for="lastname">Last name:<span class="asterisk-style">*</span></label>
+                <input id="lastname" name="lastname" type="text" class="form-control"  >
+               </div>
+             </div>
+             <div class="clearfix">
+               <div class="form-group left-side-element">
+                 <label for="dateofbirth">Date of birth:<span class="asterisk-style">*</span></label>
+                 <input id="dateofbirth" name="dateofbirth" type="date" class="form-control"  >
+               </div>
+               <div class="form-group right-side-element">
+                 <label for="company">Company:</label>
+                 <input id="company" name="company" type="text" class="form-control"  >
+               </div>
+             </div>
+             <div class="clearfix">
+               <div class="form-group left-side-element">
+                 <label for="location">Location</label>
+                 <input id="location" name="location" type="text" class="form-control" id="location" >
+                 <div class="location-details">
+                       <label >Country</label>
+                       <input type="text" class="form-control" name="country" readonly>
+                       <label>State</label>
+                       <input type="text" class="form-control" name="administrative_area_level_1" readonly>
+                       <label>City</label>
+                       <input type="text" class="form-control" name="administrative_area_level_2" readonly>
+                </div>
+               </div>
+               <div class="form-group right-side-element">
+                 <label> &nbsp; </label>
+                 <div class="map" style="border:1px solid black">
+                 </div>
+               </div>
+             </div>
+             <div><span class="badge">2</span><label class="headings">&nbsp;Account information:</label></div>
+             <div class="clearfix">
+               <div class="form-group left-side-element">
+                 <label for="username">Choose an username:<span class="asterisk-style">*</span></label>
+                 <input id="username" name="username" type="text" class="form-control"  >
+               </div>
+               <div class="form-group right-side-element">
+                 <label for="email">E-mail address:<span class="asterisk-style">*</span></label>
+                 <input id="email" name="email" type="email" class="form-control"  >
+               </div>
+             </div>
+             <div class="clearfix">
+               <div class="form-group left-side-element">
+                 <label for="password">Choose password:<span class="asterisk-style">*</span></label>
+                 <input id="password" name="password" type="password" class="form-control"  >
+               </div>
+               <div class="form-group right-side-element">
+                 <label for="repassword">Re-enter password:<span class="asterisk-style">*</span></label>
+                 <input id="repassword" name="repassword" type="password" class="form-control"  >
+               </div>
+             </div>
+             <div><span class="badge">3</span><label class="headings">&nbsp;A few words about yourself:</label></div>
+             <div class="form-group">
+               <textarea class="form-control" rows="5"></textarea>
+             </div>
+             <div><span class="badge">4</span><label class="headings">&nbsp;Terms & Conditions:</label></div>
+             <div class="form-group">
+               <input type="checkbox">&nbsp; <label>By clicking this button, you agree to our <a> Terms of Use</a> and <a> Privacy Policy</a>.</label>
+             </div>
+           </form>
+           <div class="clearfix">
+             <input type="submit" class="create-button" value="Create my account" form="form">
+           </div>
+        </div>
+        <footer>Copyright&copy;2011 Application name
+        </footer>
+      </div>
+    </body>
+  </html>
