@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Experiment</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Application">
+    <meta name="author" content="DP">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assignment11.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
+    <script src="assignment11.js"></script>
+  </head>
+  <body>
+    <!-- navigation bar starts-->
+    <nav class="navbar navigation-bar">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle nav-btn" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar nav-btn-icon"></span>
+            <span class="icon-bar nav-btn-icon"></span>
+            <span class="icon-bar nav-btn-icon"></span>
+          </button>
+          <a href="#"> <img src="images/logo.png" /></a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a class="active" href="#">Profile</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Docs</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><input class="form-control input-md search-box" placeholder="Search" type="text"></li>
+            <li><a href="#"><span class="glyphicon glyphicon-bell"></span></a></li>
+            <li><img src="images/avatar-dhg.png" class="thumbnail-navbar"></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+<!--navbar ends -->
+<!--content starts-->
+<div class="container-fluid content">
+    <div class="row">
+      <!--left panel starts-->
+      <div class="col-sm-3 left-panel">
+        <!--profile panel starts-->
+        <div class="profile">
+          <div class="profile-background">
+            <div class="profile-photo"></div>
+            <div class="bio">
+              <h4>Dave Gamache </h4>
+              <p class="profile-description">I wish i was a little bit taller, wish i was a baller, wish i had a girl... also. </p>
+              <div>&nbsp;</div>
+              <div class="row profile-sub-description">
+                <div class="col-xs-6 remove-padding">
+                  <div class="col-xs-11 remove-padding ">Friends </br> <b>12M</b></div>
+                  <div class="col-xs-1 remove-padding">
+                    <div class="vertical-line">&nbsp;</div>
+                  </div>
+                </div>
+                <div class="col-xs-6">Enemies </br> <b>1</b> </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--profile panel ends-->
+        <!--photos panel starts-->
+        <div class="photos">
+          <!-- <div class="row"> -->
+          <div><b>Photos &nbsp;</b> <a><small>Edit</small></a></div>
+          <div class="row">
+            <div class="col-sm-6 image-left"><img class="image-dimensions" src="images/instagram_5.jpg"/></div>
+            <div class="col-sm-6 image-right"><img class="image-dimensions" src="images/instagram_6.jpg"/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 image-left"><img class="image-dimensions" src="images/instagram_7.jpg"/></div>
+            <div class="col-sm-6 image-right"><img class="image-dimensions" src="images/instagram_8.jpg"/></div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 image-left"><img class="image-dimensions" src="images/instagram_9.jpg"/></div>
+            <div class="col-sm-6 image-right"><img class="image-dimensions" src="images/instagram_10.jpg"/></div>
+          </div>
+        <!-- </div> -->
+        </div>
+        <!-- photos panel ends-->
+      </div>
+      <!-- left panel ends-->
+      <!--middle panel starts-->
+      <div class="col-sm-6 middle-panel">
+        <div class="posts">
+          <div class="new-post"><button class="new-post-btn"  data-toggle="modal" data-target="#myModal">New Post</button></div>
+          <div class="post-container"> </div>
+        </div>
+      </div>
+      <!--middle panel ends-->
+      <!--right panel starts-->
+      <div class="col-sm-3 clearfix right-panel">
+        <!--sponsored panel starts-->
+        <div class="sponsored">
+          <div> <b>Sponsored</b></div>
+          <div class="sponsored-image"> </div>
+          <div class="sponsored-description"> <b>It might be time to visit Iceland.</b> </br> <p> Iceland is so chill, and everything looks cool here. Also, we heard the people are pretty nice. What are you waiting for? </p> </div>
+          <div><button class="buy-ticket-btn">Buy a ticket </button> </div>
+        </div>
+        <!--sponsored panel ends-->
+        <!--likes panel starts-->
+        <div class="likes-container">
+          <div class="likes">
+            <div class="likes-header"> <b>Likes </b><a><small>View All </small></a> </div>
+            <div class="row">
+              <div class="col-sm-3 likes-profile-pic-container align-center"> <img class="likes-profile-pic" src="images/avatar-fat.jpg" /> </div>
+                <div class="col-sm-9"> <b> Jacob Thornton</b> @fat </br>
+                  <button class="follow-btn"><span class="glyphicon glyphicon-user"></span>&nbsp;Follow </button>
+              </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="row">
+              <div class="col-sm-3 likes-profile-pic-container align-center"> <img class="likes-profile-pic" src="images/avatar-mdo.png" /> </div>
+              <div class="col-sm-9"> <b> Mark Otto</b> @mdo </br>
+                  <button class="follow-btn"><span class="glyphicon glyphicon-user"></span>&nbsp;Follow </button>
+              </div>
+            </div>
+          </div>
+          <div class="likes-caption">
+            <p>Dave really likes these nerds, no one knows why though.
+            </p>
+          </div>
+       </div>
+       <!--likes panel ends-->
+      </div>
+      <!--right panel ends-->
+    </div>
+</div>
+    <!--content ends-->
+    <!--modal to add new post starts-->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <form id="add-new-post-form" onsubmit="return false">
+              <div class="form-group">
+                <label for="new-name">Enter name :</label>
+                <input type="text" class="form-control new-name" id="new-name" name="newname">
+              </div>
+              <div class="form-group">
+                <label for="new-description">Enter description :</label>
+                <input type="text" class="form-control new-description" id="new-description" name="newdescription">
+              </div>
+              <div class="form-group">
+                <label for="new-image-url">Enter image url :</label>
+                <input type="text" class="form-control new-image-url" id="new-image-url" name="newimageurl">
+              </div>
+              <input type="submit" value="Add">
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--modal to add new post ends-->
+    <!--modal to show photo starts-->
+    <div class="modal fade pic-modal  " id="pic-modal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <button class="carousel-button-style left-button glyphicon glyphicon-left"><span class="glyphicon glyphicon-chevron-left"></span> </button>
+            <button class="carousel-button-style right-button glyphicon glyphicon-right"><span class="glyphicon glyphicon-chevron-right"></span> </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--modal to show photo ends-->
+ </body>
+ <script>
+ $(document).ready(function() {
+   var app = new Application();
+   app.initialise();
+ });
+ </script>
+
+</html>

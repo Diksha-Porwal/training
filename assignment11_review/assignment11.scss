@@ -1,0 +1,310 @@
+$theme-color: #3996D6;
+$theme-text-color: #cbdff0;
+$white-color: #ffffff;
+$content-bg-color: #F5F8FA;
+@mixin background-color($color) {
+  background-color: $color;
+}
+@mixin panel-properties {
+  background-color: $white-color;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: 5px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,.125);
+}
+@mixin background-image($size, $url) {
+  background-repeat: no-repeat;
+  background-size: $size;
+  background-image: url($url);
+}
+@mixin left-right-padding($left, $right) {
+  padding-left: $left;
+  padding-right: $right;
+}
+@mixin height-width($height, $width) {
+  height: $height;
+  width: $width;
+}
+//for form validation errors in red color
+.error {
+  color: red;
+}
+.remove-padding {
+  padding: 0px;
+}
+.align-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .image-left , .image-right {
+    padding: 10px;
+  }
+
+  .image-dimensions {
+   @include height-width(200px, 100%);
+  }
+
+  .item-thumbnail {
+    @include height-width(20%, 20%);
+  }
+
+  .likes-container {
+    text-align: center;
+  }
+
+  .likes-profile-pic {
+    @include height-width(15%, 15%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .image-left {
+    padding: 10px 5px 0px 10px;
+  }
+
+  .image-right {
+    padding: 10px 10px 0px 5px;
+  }
+
+  .image-dimensions {
+      width: 100%;
+    @include height-width(100px, 100%);
+  }
+
+  .item-thumbnail {
+    @include height-width(100%, 100%);
+  }
+
+  .likes-profile-pic-container {
+    @include left-right-padding(10px, 0px);
+    }
+
+    .likes-profile-pic {
+      @include height-width(100%, 100%);
+    }
+}
+
+.navigation-bar {
+  @include background-color($theme-color);
+  margin: 0px;
+
+  .navbar-nav li {
+      .active {
+          color: $white-color;
+        }
+      a {
+          color: $theme-text-color;
+        }
+  }
+
+  .search-box {
+    margin-top: 9px;
+  }
+
+  .thumbnail-navbar {
+        border-radius: 50%;
+        margin-top: 7px;
+        @include height-width (auto, 35px);
+  }
+
+  .nav-btn {
+      @include background-color($white-color);
+  }
+
+  .nav-btn-icon {
+      @include background-color($theme-color);
+  }
+}
+
+.item {
+  @include background-color($white-color);
+  margin: 2px;
+  // min-height: 100px;
+}
+
+.content {
+  @include background-color($content-bg-color);
+  margin: 0px;
+
+  .left-panel {
+    padding-top: 30px;
+
+    .profile {
+      @include panel-properties;
+
+      .profile-background {
+        @include background-image (100% 150px, 'images/iceland.jpg');
+        min-height: 150px;
+      }
+
+      .profile-photo {
+        @include background-image (100% 100%, 'images/avatar-dhg.png');
+        @include height-width(100px, 100px);
+        border-radius: 50%;
+        border: 4px solid $white-color;
+        margin: auto;
+        position: relative;
+        top: 100px;
+      }
+
+      .bio {
+        margin-top: 70px;
+        padding: 20px;
+        text-align: center;
+
+        .profile-description {
+          font-weight: 200;
+        }
+
+        .vertical-line {
+          @include background-color(rgba(0,0,0,.125));
+          @include height-width(40px, 2px);
+        }
+      }
+    }
+
+    .photos {
+      @include panel-properties;
+      margin-top: 30px;
+      padding: 15px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .middle-panel {
+      padding-top: 30px;
+
+      .posts {
+        @include panel-properties;
+
+          .new-post {
+            min-height: 50px;
+
+            .new-post-btn {
+              @include background-color(transparent);
+              border: 1px solid grey;
+              border-radius: 2px;
+              color: grey;
+              margin: 15px;
+              outline: none;
+            }
+          }
+
+          .item {
+            border-top: 1px solid rgba(0,0,0,.125);
+            padding: 10px;
+
+            .item-padding {
+              padding: 15px 0px;
+            }
+
+            .item-thumbnail {
+              border-radius: 50%;
+              margin-top: 10px;
+            }
+
+            .item-time {
+              color: grey;
+            }
+
+            .item-description {
+              font-weight: 200;
+              padding-top: 5px;
+            }
+          }
+      }
+  }
+
+  .right-panel {
+    padding-top: 30px;
+
+    .sponsored {
+      @include panel-properties;
+      padding: 15px;
+
+      .sponsored-image {
+        @include background-image (100% 100%, 'images/instagram_2.jpg');
+        height: 250px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+      }
+
+      .sponsored-description {
+        font-weight: 200;
+        text-align: left;
+      }
+
+      .buy-ticket-btn {
+        @include background-color($white-color);
+        color: #5496cf;
+        border: 1px solid #5496cf;
+        border-radius: 4px;
+        font-size: 13px;
+        padding: 7px 9px;
+      }
+    }
+
+    .likes-container {
+      @include panel-properties;
+      margin-top: 30px;
+
+      .likes {
+        border-bottom: 1px solid rgba(0,0,0,.125);
+        padding: 15px;
+
+        .likes-header {
+          margin-bottom: 5px;
+        }
+
+        .likes-profile-pic {
+          border: 1px solid transparent;
+          border-radius: 50%;
+        }
+
+        .follow-btn {
+          @include background-color(transparent);
+          border: 1px solid $theme-color;
+          border-radius: 2px;
+          color: $theme-color;
+          font-size: 13px;
+          margin-top: 3px;
+          padding: 3px 7px;
+        }
+      }
+
+      .likes-caption {
+        @include background-color($content-bg-color);
+        color: rgba(0,0,0,0.5);
+        padding: 14px;
+      }
+    }
+  }
+}
+
+.pic-modal {
+  .modal-body {
+    background-size: 100% 100%;
+    min-height: 400px;
+
+    .carousel-button-style {
+      background-color: transparent;
+      color: #ffffff;
+      border: none;
+      position: absolute;
+      outline: none;
+    }
+
+    .left-button {
+      top: 200px;
+      left: 50px;
+    }
+
+    .right-button {
+      top: 200px;
+      right: 50px;
+    }
+  }
+}

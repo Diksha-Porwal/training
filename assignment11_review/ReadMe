@@ -1,0 +1,6 @@
+In this assignment used external mustache file , sent ajax request for it .
+Also used html5 History Api.
+Made Carousel for the photos section.
+Used modal,popover,jquery form validation,regex,validated if image exists on server .
+Also used Html5 web storage(local storage) to calculate time difference .
+Used http server(installed through npm) to serve the local files on server. Starting it in the project folder.
