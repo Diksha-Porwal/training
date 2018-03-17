@@ -8,11 +8,7 @@ $(document).ready(function() {
       },
       lastname: {
         required: true,
-        charactersOnly: true,
-        tempFunc : function(value){
-          if(value.value == "hii") {
-            console.log($("#firstname").prop("required")); // why is false getting printed , required to true set hai
-        }}
+        charactersOnly: true
       },
       dateofbirth: {
         required: true
@@ -57,14 +53,6 @@ $(document).ready(function() {
         required: "Confirm your password"
       }
     }
-    // ,
-    // highlight: function(element) {
-    //   console.log(element);
-    //     $(element).next().addClass("error-class");
-    // },
-    // unhighlight: function(element) {
-    //     $(element).next().removeClass("error-class");
-    // }
   });
 
   $.validator.addMethod("charactersOnly",function(value, element) {
