@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Youtube</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Youtube">
+    <meta name="author" content="DP">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assignment5.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js"></script>
+    <script src="assignment5.js"></script>
+    <script id="video-template" type="text/template">
+    {{#items}}
+      <div class="col-xs-12 col-sm-4 col-md-3 video-outer-div">
+        <div class="video-div">
+          <div class="thumbnail-image" style="background-image: url('{{snippet.thumbnails.medium.url}}')"> </div>
+          <div class="image-title"> {{snippet.title}} </div>
+          <div class="image-description"> {{snippet.description}} </div>
+          <div class="watch-button-div">
+            {{#id}}
+            {{#videoId}}
+            <button class="watch-button" onclick="watchButtonClicked(this)" id="{{id.videoId}}" data-idType="videoId" data-title="{{snippet.title}}" data-description="{{snippet.description}}"> WATCH </button>
+            {{/videoId}}
+            {{^videoId}}
+            <button class="watch-button" onclick="watchButtonClicked(this)" id="{{id.playlistId}}" data-idType="playlistId" data-title="{{snippet.title}}" data-description="{{snippet.description}}"> WATCH </button>
+            {{/videoId}}
+            {{/id}}
+            <span class="notification-icon glyphicon glyphicon-bell" data-status="off" onclick="bellIconSpanClicked(this)"> </span>
+          </div>
+        </div>
+      </div>
+    {{/items}}
+    </script>
+  </head>
+  <body class="body">
+    <div class="header jumbotron">
+        YOUTUBE
+    </div>
+    <div class="container-fluid" >
+      <div class="col-xs-offset-1 col-xs-10">
+        <form id="search-form" onsubmit="return false">
+          <div class="input-group">
+            <input type="text" id="search-box" class="form-control" placeholder="Search" aria-describedby="search-icon">
+            <span class="input-group-addon" id="search-icon" onclick="searchButtonClicked()"><span class="glyphicon glyphicon-search"></span></span>
+          </div>
+        </form>
+      </div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
+      <div class="row">&nbsp;</div>
+      <div class="result" id="result">
+        <div id="result-outer-child-div">
+        </div>
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="modal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-header" id="modal-header">
+          <label id="modal-title"></label>
+          <span class="close" id="close">&times;</span>
+        </div>
+        <div class="modal-body">
+          <iframe id="iframe" class="iframe">
+          </iframe>
+        </div>
+        <div class="modal-footer" id="modal-footer">
+        </div>
+      </div>
+    </div>
+      <div class="loader" id="loader"></div>
+      <div id="no-items" class="no-items">No search results !!!</div>
+  </body>
+</html>
