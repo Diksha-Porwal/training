@@ -1,0 +1,143 @@
+.heading {
+  font-size: 35px;
+  font-weight: 400; }
+
+.heading-bold {
+  font-size: 35px;
+  font-weight: 900; }
+
+.heading-description {
+  font-size: 23px;
+  font-weight: 200; }
+
+.heading-bold-description {
+  font-size: auto;
+  font-weight: 900; }
+
+.footer-text, body #footer .jumbotron ul li a {
+  font-size: 12px;
+  font-weight: 200; }
+
+body #header .navbar {
+  margin-bottom: 0px;
+  border-radius: 0px; }
+  body #header .navbar .navbar-nav {
+    list-style-type: none; }
+  body #header .navbar .nav-list-margin {
+    margin-right: 45px; }
+  body #header .navbar .navbar-header .brand-name {
+    color: #ffffff;
+    font-size: 30px;
+    font-weight: auto; }
+    body #header .navbar .navbar-header .brand-name img {
+      height: 30px;
+      width: 30px; }
+  body #header .navbar .navbar-header .brand-name-padding {
+    padding-left: 50px; }
+  body #header .navbar .navbar-header .navbar-toggle {
+    border: 1px solid #334670;
+    background-color: #334670; }
+    body #header .navbar .navbar-header .navbar-toggle .icon-bar {
+      background-color: #ffffff; }
+  body #header .navbar .navbar-collapse {
+    border-color: #334670; }
+  body #header .navbar ul li a {
+    color: #ffffff; }
+    body #header .navbar ul li a:hover {
+      background-color: #425990; }
+  body #header .navbar ul .active-link {
+    background-color: #334670; }
+body #header .navbar-default {
+  background-color: #4c66a4;
+  border: none; }
+body #header .jumbotron {
+  color: #ffffff;
+  text-shadow: 3px 3px #334670;
+  text-align: center;
+  border-radius: 0px;
+  background-color: #4c66a4;
+  margin-bottom: 0px; }
+  body #header .jumbotron h1 {
+    font-size: auto;
+    font-weight: 350;
+    letter-spacing: 1.5px; }
+  body #header .jumbotron .btn-lg {
+    padding: 15px 50px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: auto;
+    background-color: #334670;
+    color: #ffffff; }
+    body #header .jumbotron .btn-lg:hover {
+      background-color: #1f2a44; }
+body #introduction .jumbotron {
+  text-align: center;
+  border-radius: 0px;
+  background-color: #ffffff;
+  margin-bottom: 0px; }
+  body #introduction .jumbotron .intro-panels {
+    margin-top: 30px;
+    text-align: center; }
+    body #introduction .jumbotron .intro-panels p {
+      font-size: 15px;
+      font-weight: auto; }
+    body #introduction .jumbotron .intro-panels .glyphicon {
+      color: #4c66a4;
+      font-size: 90px;
+      font-weight: auto; }
+    body #introduction .jumbotron .intro-panels .intro-panel-label {
+      margin-top: 20px;
+      font-size: 25px;
+      font-weight: 200; }
+body #lets-get-started .jumbotron {
+  text-align: center;
+  border-radius: 0px;
+  background-color: #e6e4e4;
+  margin-bottom: 0px; }
+  body #lets-get-started .jumbotron .img-thumbnail {
+    background-color: #e6e4e4;
+    border: none; }
+  body #lets-get-started .jumbotron .btn-lg {
+    padding: 15px 50px;
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: auto;
+    background-color: #334670;
+    color: #ffffff; }
+    body #lets-get-started .jumbotron .btn-lg:hover {
+      background-color: #1f2a44; }
+body #testimonials .jumbotron {
+  text-align: center;
+  border-radius: 0px;
+  background-color: #f7f7f7;
+  margin-bottom: 0px; }
+  body #testimonials .jumbotron .testimonials-comments {
+    font-size: 19px;
+    font-weight: auto;
+    padding: 20px;
+    text-align: left; }
+  body #testimonials .jumbotron .testimonials-comments-author-name {
+    color: #0645AD;
+    text-align: left;
+    display: inline-block;
+    padding-top: 5px; }
+body #footer .jumbotron {
+  color: #8A9CC8;
+  padding-left: 0px;
+  padding-right: 0px;
+  text-align: center;
+  border-radius: 0px;
+  background-color: #4c66a4;
+  margin-bottom: 0px; }
+  body #footer .jumbotron ul {
+    list-style-type: none;
+    text-align: left;
+    margin-left: 0; }
+    body #footer .jumbotron ul .list-title {
+      font-size: auto;
+      font-weight: bolder; }
+    body #footer .jumbotron ul li a {
+      text-decoration: none;
+      color: #8A9CC8; }
+
+/*# sourceMappingURL=assignment7.css.map */
