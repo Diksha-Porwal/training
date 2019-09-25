@@ -1,0 +1,146 @@
+@white-color: #FFFFFF;
+@full-width:100%;
+@full-height:100%;
+@margin-zero:0;
+@font-weight-bold:bold;
+.font(@font-weight;@font-size;@font-family)
+{
+  font:@font-weight @font-size @font-family
+}
+.dimensions(@width;@height)
+{
+  width: @width;
+  height: @height;
+}
+    body{
+      margin: @margin-zero;
+      padding: 0px;
+      .title-bar{
+        background-color: #FFA500;
+        color:@white-color;
+        text-align: center;
+        padding-top: 5px;
+        min-height:75px;
+        vertical-align: middle;
+        .font(900;50px;serif);
+        letter-spacing: 5px;
+      }
+      .nav-bar-header{
+        position:sticky;
+        top:@margin-zero;
+        right:@margin-zero;
+        .nav-list{
+          list-style-type: none;
+          background-color: @white-color;
+          width: @full-width;
+          padding: 0px;
+          margin: @margin-zero;
+          display: inline-block;
+              li{
+                display: inline-flex;
+                min-width:24%;
+                    a{
+                      color: #000000;
+                      text-align: center;
+                      padding: 14px 120px 16px;
+                      text-decoration: none;
+                    }
+                 }
+                 li:hover{
+                   background-color: #1e90ff;
+                   color: @white-color;
+                 }
+                 li:visited{
+                   background-color: #1e90ff;
+                 }
+           }
+      }
+
+      .cities{
+        float: left;
+        margin: @margin-zero;
+        .dimensions(220px;500px);
+      }
+      .article-sec{
+        border-left: 1px solid gray;
+        padding: 1em;
+        max-width:700px;
+        height:500px;
+        display: inline-block;
+        background-image: url('img_6_india_flag.jpeg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        font-weight: @font-weight-bold;
+      }
+      .black-border{
+        border: 1px solid #000000;
+      }
+      .img-dimensions{
+        .dimensions(@full-width;@full-height);
+      }
+      .aside-section{
+        float:right;
+        .dimensions(300px;260px);
+      }
+      ul.symbols-list{
+        list-style-type: circle;
+      }
+
+      .cities {
+          div{
+          .dimensions(@full-width;40px);
+          text-align: center;
+          padding-top: 20px;
+          margin: @margin-zero;
+          background-color: #FAF0E6;
+          clear: both;
+          a{
+            text-decoration: none;
+          }
+          &:hover{
+            background-color: #1e90ff;
+          }
+        }
+      }
+
+      .font-style{
+        text-align:center;
+        padding-top:5px;
+        font-weight:@font-weight-bold;
+      }
+
+      table{
+        border-collapse: collapse;
+        width: @full-width;
+        caption{
+          font-weight:@font-weight-bold;
+          padding:5px;
+        }
+        tr{
+          height: 30px;
+          td{
+            text-align: left;
+          }
+        }
+        tr:nth-child(odd){
+          background-color: #f2f2f2;
+        }
+
+      }
+
+      .footer{
+        background-color: @white-color;
+        color:blue;
+        text-align: center;
+        vertical-align: middle;
+        padding: 10px;
+        position: sticky;
+        bottom: @margin-zero;
+        left: @margin-zero;
+        width: auto;
+        margin: @margin-zero;
+        right:@margin-zero;
+      }
+
+    }
