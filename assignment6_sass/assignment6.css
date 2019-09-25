@@ -1,0 +1,198 @@
+body {
+  background-image: url("images/yellow_background.png");
+  padding-top: auto;
+  padding-right: 15px;
+  padding-bottom: auto;
+  padding-left: 15px; }
+  body header .logo-header label {
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: 50px; }
+  body header .top-separator-image-margin {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto; }
+  body .separator-image {
+    background: url("images/line.png") 0% 0%/auto repeat scroll padding-box border-box transparent;
+    width: auto;
+    height: 4px;
+    text-align: center; }
+  body nav {
+    width: auto;
+    height: 20px; }
+    body nav label {
+      display: inline-block;
+      font-family: Courier New;
+      font-size: 13px;
+      font-weight: auto;
+      margin-top: 10px;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-left: auto; }
+    body nav ul {
+      float: right;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px; }
+      body nav ul li {
+        display: inline;
+        margin-top: auto;
+        margin-right: 14px;
+        margin-bottom: auto;
+        margin-left: auto; }
+        body nav ul li a {
+          color: #000000;
+          font-family: Courier New;
+          font-size: 25px;
+          font-weight: auto;
+          text-decoration: none; }
+  body .hero-image {
+    background: url("images/sanfrancisco.jpg") 0% 0%/cover no-repeat scroll padding-box border-box transparent;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+    position: relative; }
+    body .hero-image div {
+      background-color: #000000;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      bottom: 0px;
+      width: 100%;
+      height: 15%;
+      opacity: 0.8;
+      padding-top: 15px;
+      padding-right: auto;
+      padding-bottom: auto;
+      padding-left: auto;
+      position: absolute; }
+      body .hero-image div label {
+        color: #ffffff; }
+    body .hero-image button {
+      background: url("images/small_arrow.png") right 10px/10px no-repeat scroll padding-box border-box #b22222;
+      border-color: #b22222;
+      border-radius: 5px;
+      color: #ffffff;
+      float: right;
+      font-size: 15px;
+      font-weight: bold;
+      width: auto;
+      height: 80%;
+      margin-top: auto;
+      margin-right: 10px;
+      margin-bottom: auto;
+      margin-left: auto;
+      padding-top: 0px;
+      padding-right: auto;
+      padding-bottom: auto;
+      padding-left: auto; }
+  body .border-black, body aside .zozor-img {
+    border: 1px solid #000000; }
+  body .headings {
+    font-family: Courier New;
+    font-size: 20px;
+    font-weight: 10px;
+    letter-spacing: 1px; }
+  body section {
+    display: inline-block;
+    width: 75%;
+    height: 400px;
+    padding-top: auto;
+    padding-right: 7px;
+    padding-bottom: auto;
+    padding-left: auto; }
+    body section label {
+      display: inline-block;
+      margin-top: 12px;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-left: auto;
+      vertical-align: top; }
+    body section img {
+      width: auto;
+      height: 100%; }
+    body section .section-headbar {
+      width: auto;
+      height: 50px;
+      margin-top: 25px;
+      margin-right: auto;
+      margin-bottom: 10px;
+      margin-left: auto; }
+    body section .description {
+      font-family: Arial;
+      font-size: small;
+      font-weight: 2; }
+  body aside {
+    background-color: #808080;
+    border-radius: 10px;
+    color: #ffffff;
+    display: inline-block;
+    width: 24%;
+    height: 400px;
+    position: relative;
+    vertical-align: top; }
+    body aside p {
+      padding-top: auto;
+      padding-right: 15px;
+      padding-bottom: auto;
+      padding-left: 15px; }
+    body aside .aside-section-arrow {
+      margin-top: 15%;
+      margin-right: auto;
+      margin-bottom: auto;
+      margin-left: -4%;
+      position: absolute; }
+    body aside .description {
+      font-family: Arial;
+      font-size: small;
+      font-weight: 2; }
+    body aside .aside-description {
+      letter-spacing: 1px;
+      text-align: justify; }
+    body aside .zozor-img-div {
+      text-align: center; }
+    body aside .social-links-bar {
+      width: auto;
+      height: 20px;
+      padding-top: auto;
+      padding-right: auto;
+      padding-bottom: auto;
+      padding-left: 15px; }
+  body .bottom-panel {
+    width: auto;
+    height: 150px;
+    margin-top: 10px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto; }
+    body .bottom-panel .bottom-sub-panel {
+      float: left;
+      width: 33%;
+      height: 100%; }
+    body .bottom-panel .bottom-friends-panel ul {
+      color: #b22222;
+      float: left;
+      list-style-image: url("images/external_link.png");
+      margin: 0px;
+      width: 40%;
+      height: auto; }
+    body .bottom-panel .bottom-friends-panel-heading {
+      padding-top: auto;
+      padding-right: auto;
+      padding-bottom: auto;
+      padding-left: 40px; }
+    body .bottom-panel .bottom-panel-pictures {
+      width: 20%;
+      height: auto; }
+  body footer {
+    margin-top: 20px;
+    margin-right: auto;
+    margin-bottom: auto;
+    margin-left: auto; }
+
+/*# sourceMappingURL=assignment6.css.map */

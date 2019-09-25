@@ -1,0 +1,175 @@
+  .logo-header label {
+    font-family: cursive;
+    font-size: 40px;
+    font-weight: 50px;
+  }
+  .separator-image {
+    background-image: url('images/line.png');
+    height: 4px;
+    text-align: center;
+  }
+  .top-separator-image-margin{
+    margin-top: 20px;
+  }
+  body {
+    background-image: url('images/yellow_background.png');
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  nav {
+    height:20px;
+  }
+  nav label {
+    display: inline-block;
+    font-family: Courier New;
+    font-size: 13px;
+    margin-top: 10px;
+  }
+  nav ul {
+    float: right;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 14px;
+  }
+  nav ul li a {
+    color: black;
+    font-family: Courier New;
+    font-size: 25px;
+    text-decoration: none;
+  }
+  .hero-image {
+    background-image: url('images/sanfrancisco.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px grey;
+    height: 300px;
+    margin-bottom: 25px;
+    margin-top: 20px;
+    position: relative;
+    width: 100%;
+  }
+  .hero-image div {
+    background-color: black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    bottom: 0px;
+    height: 15%;
+    opacity: 0.8;
+    padding-top: 15px;
+    position: absolute;
+    width: 100%;
+  }
+  .hero-image div label {
+    color: white;
+  }
+  .hero-image button {
+    background-color: FireBrick;
+    background-image: url('images/small_arrow.png');
+    background-repeat:no-repeat;
+    background-position: right 10px;
+    border-color: FireBrick;
+    border-radius: 5px;
+    color: white;
+    float: right;
+    font-size: 15px;
+    font-weight: bold;
+    height:80%;
+    margin-right: 10px;
+    padding-top: 0;
+  }
+  .border-black {
+    border:1px solid black;
+  }
+  .headings {
+    font-family: Courier New;
+    font-size: 20px;
+    font-weight: 10px;
+    letter-spacing: 1px;
+  }
+  section {
+    display: inline-block;
+    height:400px;
+    padding-right: 7px;
+    width: 75%;
+  }
+  .section-headbar {
+    height: 50px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+  }
+  section label {
+    display: inline-block;
+    margin-top: 12px;
+    vertical-align: top;
+  }
+  section img {
+    height: 100%;
+  }
+  .description {
+    font-family: Arial;
+    font-size: small;
+    font-weight: 2;
+  }
+  aside {
+    background-color: Gray;
+    border-radius: 10px;
+    color: white;
+    display: inline-block;
+    height: 400px;
+    position: relative;
+    vertical-align: top;
+    width: 24%;
+  }
+  aside p {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .aside-section-arrow {
+    margin-left: -4%;
+    margin-top: 15%;
+    position: absolute;
+  }
+  .aside-description {
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .zozor-img {
+    border: 1px solid black;
+  }
+  .zozor-img-div{
+    text-align: center;
+  }
+  .social-links-bar {
+    height: 20px;
+    padding-left: 15px;
+  }
+  .bottom-panel {
+    height: 150px;
+    margin-top: 10px;
+  }
+  .bottom-sub-panel {
+    float: left;
+    height: 100%;
+    width:33%;
+  }
+  .bottom-friends-panel ul {
+    color: FireBrick;
+    float: left;
+    list-style-image: url("images/external_link.png");
+    margin: 0px;
+    width:40%;
+  }
+  .bottom-friends-panel-heading {
+    padding-left: 40px;
+  }
+  .bottom-panel-pictures {
+    width:20%;
+  }
+  footer {
+    margin-top: 20px;
+  }
